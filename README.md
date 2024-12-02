@@ -21,14 +21,14 @@ Job Hunt is an online job portal for Kezan Consultancy. The portal acts as an in
 - **Responsive Feedback:** Admin can respond to user feedback and queries.
 
 ## Screenshots
-
-https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0004.jpg
+![App Screenshot]
+(https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0004.jpg
 https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0005.jpg
 https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0006.jpg
 https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0007.jpg
 https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0008.jpg
 https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0009.jpg
-https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0010.jpg
+https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0010.jpg)
 
 ## Tech Stack
 
