@@ -1,0 +1,132 @@
+{%extends 'parent.html'%}
+{%load static%}
+{%block link%}
+<link rel="stylesheet" href="{%static 'css/reg.css'%}">
+{%endblock%}
+{% block body %}
+<div class="row">
+	<div class="col-sm-12 text-center py-5 " style="background:linear-gradient(90deg ,rgba(255,255,255,0.9) 50%,rgba(255,0,0,0.8)50%),url('{%static 'img/best.jpg'%}');background-size: cover;">
+		
+		<h2 id="h1 ">WELCOME &nbsp; to <font color="white">the Job Portal..</font></h2>
+
+		<!-- login form -->
+	
+	<div class="container1 mx-auto" id="login">
+		<div class="form-container sign-up-container">
+			
+				<h1 class="h1">Create Account</h1>
+				<div class="social-container">
+					<a href="#" class="social a"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="social a"><i class="fab fa-google-plus-g"></i></a>
+					<a href="#" class="social a"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+				<span>or use your email for registration</span>
+				<input type="text" name="username" placeholder="Name" />
+				<input type="email"  placeholder="Email" />
+				<input type="password" placeholder="Password" />
+				<button>Sign Up</button>
+			
+		</div>
+		<div class="form-container sign-in-container">
+			<form action="{%url 'mainapp:logcode'%}" method="post">
+                {%csrf_token%}
+				<h1 class="h1">Log in</h1>
+				{%if messages%}
+    {%for m  in messages%}
+    <h2>{{m}}</h2>
+    {%endfor%}
+    {%endif%}
+				<div class="social-container">
+					<a href="#" class="social a"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="social a"><i class="fab fa-google-plus-g"></i></a>
+					<a href="#" class="social a"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+				<span class="span">or use your account</span>
+				<input type="text" name="username" placeholder="Username" />
+				<input type="password" name="password" placeholder="Password" />
+				<input type="hidden" name="usertype" value="jobseeker" placeholder="Password" />
+
+				<a href="#" class="a">Forgot your password?</a>
+				<button>Log in </button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h1 class="h1">Hello, Seeker!</h1>
+					<p class="p">Enter your personal details and start journey with us, if not yet registered click below !</p>
+					<button class="ghost" id="signUp" onclick="reg()">Sign Up</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- registration form -->
+	
+	<h2 id="h2">Enter Your Details..</h2>
+	<div class="container1 mx-auto" id="register">
+		<div class="form-container sign-in-container">
+			<form action="{%url 'mainapp:reg'%}" method="post">
+				{%csrf_token%}
+				<input type="text" placeholder="Enter your name" name="name"/>
+			<table style="color: gray;">
+				<tr>
+					<td style="font-size:14px;"">
+						Select Your Gender &nbsp;
+					</td>
+					<td style="font-size:13px; display: flex;">
+						<input type="radio" value="male" name="gender"> <p style="margin:auto 0px">Male</p>
+				<input type="radio" value="female" name="gender"> <p style="margin:auto 0px">Female</p>
+			
+					</td>
+				</tr>
+			</table>
+				
+				
+				
+				<textarea name="address" id="" cols="30" rows="3" placeholder="enter your address"></textarea>
+				<input type="text" placeholder="Enter contactno" name="contactno"/>
+				<input type="email" placeholder="Enter your email" name="email"/>
+				
+				<input type="password" name="password" id="" placeholder="enter password">
+				<input type="date" placeholder="Enter your DOB" name="dob"/>
+				
+			
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<input type="text" placeholder="Enter Qualification" name="qualification"/>
+					<input type="text" placeholder="Enter Experience" name="experience"/>
+					<textarea name="keyskill" id="" cols="30" rows="5" placeholder="Enter your keyskills"></textarea>
+					<input type="submit" class="button">
+				</form>
+					<p>Already registered !</p>
+					<button class="ghost button" id="signUp" onclick="login()">Log in</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+{% endblock %}
+
+{%block script%}
+    <script>
+	function reg()
+	{
+		register.style.display="block";
+		document.getElementById('login').style.display="none";
+		document.getElementById('h1').style.display="none";
+		document.getElementById('h2').style.display="block";
+	}
+	function login()
+	{
+		register.style.display="none";
+		document.getElementById('login').style.display="block";
+		document.getElementById('h2').style.display="none";
+		document.getElementById('h1').style.display="block";
+	}
+
+</script>
+{%endblock%}

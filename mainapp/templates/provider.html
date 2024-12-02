@@ -1,0 +1,103 @@
+{%extends 'parent.html'%}
+{%load static%}
+{%block link%}
+<link rel="stylesheet" href="{%static 'css/reg.css'%}">
+{%endblock%}
+{% block body %}
+<div class="row">
+	<div class="col-sm-12 text-center py-5 " style="background:linear-gradient(90deg ,rgba(255,255,255,0.9) 50%,rgba(255,0,0,0.8)50%),url('{%static 'img/best.jpg'%}');background-size: cover;">
+		
+		<h2 id="h1">WELCOME &nbsp; to <font color="white">the Job Portal..</font></h2>
+
+		<!-- login form -->
+	
+	<div class="container1 mx-auto" id="login">
+		<div class="form-container sign-in-container">
+			<form action="{%url 'mainapp:logcode'%}" method="post">
+				{%csrf_token%}
+				<h1 class="h1">Log in</h1>
+				{%if messages%}
+    {%for m  in messages%}
+    <h2>{{m}}</h2>
+    {%endfor%}
+    {%endif%}
+				<div class="social-container">
+					<a href="#" class="social a"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="social a"><i class="fab fa-google-plus-g"></i></a>
+					<a href="#" class="social a"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+				<span>or use your account</span>
+				<input type="email" name="username" placeholder="Email"/>
+				<input type="hidden" name="usertype" value="provider"/>
+				<input name="password" type="password" placeholder="Password" />
+				<a href="#" class="a">Forgot your password?</a>
+				<button>Log in </button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h1 class="h1">Hello,Employer!</h1>
+					<p class="p">Enter your personal details and start journey with us if not yet registered</p>
+					<button class="ghost" id="signUp" onclick="reg()">Sign Up</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- registration form -->
+	
+	<h2 id="h1" style="display: none;">WELCOME &nbsp; to <font color="white">the Job Portal..</font></h2>
+
+		<!-- reg form -->
+	
+	<div class="container1 mx-auto" id="register">
+		<div class="form-container sign-in-container">
+			<form method="post" action="{%url 'mainapp:proreg'%}">
+				{%csrf_token%}
+				<input type="text" placeholder="Enter Firmname" name="firmname"/>
+				<textarea name="firmwork" id="" cols="30" rows="3" placeholder="Enter Firmwork"></textarea>
+				<textarea name="firmaddress" id="" cols="30" rows="3" placeholder="Enter Firmaddress"></textarea>
+				<input type="text" placeholder="Enter Company Name" name="cpname"/>
+				<input type="email" placeholder="Enter Company Email" name="cpemailaddress"/>
+				<input type="password" name="password" id="" placeholder="enter password">
+			
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					
+				<input type="text" placeholder="Enter Company Contact No" name="cpcontactno"/>
+					<input type="text" placeholder="Enter Aadhar No" name="aadharno"/>
+					<input type="text" placeholder="Enter Pan No" name="panno"/>
+					<input type="text" placeholder="Enter Gst No" name="gstno"/>
+					
+					<input type="submit" value="Register" class="button">
+				</form>
+				</button>
+					<p class="p">Already registered !</p>
+					<button class="ghost" id="signUp" onclick="login()">Log in</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	</div>
+</div>
+{% endblock %}
+
+{%block script%}
+    <script>
+	function reg()
+	{
+		register.style.display="block";
+		document.getElementById('login').style.display="none";
+	}
+	function login()
+	{
+		register.style.display="none";
+		document.getElementById('login').style.display="block";
+	}
+
+</script>
+{%endblock%}

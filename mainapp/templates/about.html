@@ -1,0 +1,81 @@
+{%extends 'parent.html'%}
+{%load static%}
+{% block body %}
+ <!-- slider start -->
+ <div class="container-fluid">
+    <div class="row" style="background-image: url({%static 'img/title-bg.jpg'%}); background-size: cover; background-repeat: no-repeat; height: 500px;">
+        <div class="col-sm-10 mx-auto my-auto text-white">
+            <p style="font-weight: bold; font-size: 32px;">
+                <span style="border-bottom: 2px solid #FF6634;padding-bottom: 5px;">About</span> Us
+            </p>
+            <a href="{%url 'mainapp:index'%}" style="color: white;text-decoration: none;">Kezan Consulting: Your Trusted Partner for Strategic Human Resource Solutions </a>> About Us
+        </div>
+            </div>
+            </div>
+<!-- slider end -->
+
+<!-- body section start -->
+
+<div class="container">
+<div class="row py-4">
+    <div class="col-sm-6 mx-auto my-auto p-5">
+        <img src="{%static 'img/about.jpg'%}" alt="" style="width: 100%;border-radius: 10px;">
+    </div>
+    <div class="col-sm-6 mx-auto p-5" style="font-weight: bold;">
+        <p class="text-secondary">
+            ABOUT KEZAN CONSULTING
+        </p>
+        <h1 style="font-weight: bold;">Who <span style="color: #FF6634;">We Are ?</span></h1>
+        <br>
+        <h5 class="text-primary" style="font-weight: bold;">
+            Our Story: A Decade-Long Journey
+        </h5>
+        <br>
+        <p class="text-secondary">
+            Welcome to Kezan Consulting, where our journey in the world of Human Resource services has been defined by dedication, experience, and a commitment to excellence. Established on January 16, 2023, Kezan Consulting is a unit of Kezan India Private Limited, continuing a legacy that began 12 years ago under the name Saarthi Consulting, operating as a part of Bhumi Enterprises.
+        </p>
+        <br>
+        <p class="text-secondary">
+            With over 12 years of rich industry experience, our journey started as Saarthi Consulting under the umbrella of Bhumi Enterprises. Over the years, we have evolved, grown, and continually refined our expertise to become Kezan Consulting. This transformation reflects our commitment to providing even more comprehensive, innovative, and client-centric Human Resource services
+        </p>
+    </div>
+</div>
+<div class="row py-5">
+    <div class="col-sm-12 text-center">
+        <p class="text-secondary">WHY CHOOSE US</p>
+        <h1 style="font-weight: bold;">
+            Why Choose
+            <br>
+            <span style="color: #FF6634;">
+                Kezan <span class="text-dark" style="border-bottom: 2px solid #FF6634;padding-bottom: 10px;">Consulting</span>
+            </span>
+        </h1>
+    </div>
+    <div class="row py-5 text-center">
+    <div class="col-sm-4 p-2">
+        <p style="font-size: 22px; font-weight: bold;"><i class="fa-regular fa-handshake fa-xl" style="color: #FF6634;"></i> Proven Track Record</p>
+    </div>
+    <div class="col-sm-4 p-2">
+        <p style="font-size: 22px;font-weight: bold;"><i class="fa-solid fa-users fa-xl" style="color: #FF6634;"></i> Client-Centric Approach</p>
+    </div>
+    <div class="col-sm-4 p-2">
+        <p style="font-size: 22px; font-weight: bold;"><i class="fa-solid fa-user-tie fa-xl" style="color: #FF6634;"></i> Services with TAT</p>
+    </div>
+</div>
+<div class="row py-5 text-center">
+    <div class="col-sm-4 p-2">
+        <p style="font-size: 22px; font-weight: bold;"><i class="fa-regular fa-handshake fa-xl" style="color: #FF6634;"></i> Tailored Solutions</p>
+    </div>
+    <div class="col-sm-4 p-2">
+        <p style="font-size: 22px;font-weight: bold;"><i class="fa-solid fa-users fa-xl" style="color: #FF6634;"></i> Commit to Excellence</p>
+    </div>
+    <div class="col-sm-4 p-2">
+        <p style="font-size: 22px; font-weight: bold;"><i class="fa-solid fa-user-tie fa-xl" style="color: #FF6634;"></i> Innovation at the Core</p>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- body section end -->
+
+{%endblock%}

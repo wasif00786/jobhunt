@@ -1,0 +1,93 @@
+<div class="row">
+	<div class="col-sm-12 text-center py-5 " style="background:linear-gradient(90deg ,rgba(255,255,255,0.9) 50%,rgba(255,0,0,0.8)50%),url('best.jpg');background-size: cover;">
+		
+		<h2 id="h1 ">WELCOME &nbsp; to <font color="white">the Job Portal..</font></h2>
+
+		<!-- login form -->
+	
+	<div class="container1 mx-auto" id="login">
+		<div class="form-container sign-up-container">
+			<form action="#">
+				<h1 class="h1">Create Account</h1>
+				<div class="social-container">
+					<a href="#" class="social a"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="social a"><i class="fab fa-google-plus-g"></i></a>
+					<a href="#" class="social a"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+				<span>or use your email for registration</span>
+				<input type="text" placeholder="Name" />
+				<input type="email" placeholder="Email" />
+				<input type="password" placeholder="Password" />
+				<button>Sign Up</button>
+			</form>
+		</div>
+		<div class="form-container sign-in-container">
+			<form action="#">
+				<h1 class="h1">Log in</h1>
+				<div class="social-container">
+					<a href="#" class="social a"><i class="fab fa-facebook-f"></i></a>
+					<a href="#" class="social a"><i class="fab fa-google-plus-g"></i></a>
+					<a href="#" class="social a"><i class="fab fa-linkedin-in"></i></a>
+				</div>
+				<span class="span">or use your account</span>
+				<input type="email" placeholder="Email" />
+				<input type="password" placeholder="Password" />
+				<a href="#" class="a">Forgot your password?</a>
+				<button>Log in </button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h1 class="h1">Hello, Seeker!</h1>
+					<p class="p">Enter your personal details and start journey with us, if not yet registered click below !</p>
+					<button class="ghost" id="signUp" onclick="reg()">Sign Up</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- registration form -->
+	
+	<h2 id="h2">Enter Your Details..</h2>
+	<div class="container1 mx-auto" id="register">
+		<div class="form-container sign-in-container">
+			<form action="#">
+				<input type="text" placeholder="Enter your name" name="name"/>
+			<table style="color: gray;">
+				<tr>
+					<td style="font-size:14px;"">
+						Select Your Gender &nbsp;
+					</td>
+					<td style="font-size:13px; display: flex;">
+						<input type="radio" value="male" name="gender"> <p style="margin:auto 0px">Male</p>
+				<input type="radio" value="female" name="gender"> <p style="margin:auto 0px">Female</p>
+			
+					</td>
+				</tr>
+			</table>
+				
+				
+				
+				<textarea name="address" id="" cols="30" rows="3" placeholder="enter your address"></textarea>
+				<input type="txet" placeholder="Enter contactno" name="contactno"/>
+				<input type="email" placeholder="Enter your email" name="email"/>
+				<input type="date" placeholder="Enter your DOB" name="dob"/>
+				<input type="text" placeholder="Enter Qualification" name="qualification"/>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<input type="text" placeholder="Enter Experience" name="Experience"/>
+					<textarea name="keyskills" id="" cols="30" rows="5" placeholder="Enter your keyskills"></textarea>
+					<input type="password" name="password" id="" placeholder="enter password">
+					<input type="submit" class="button">
+					<p>Already registered !</p>
+					<button class="ghost button" id="signUp" onclick="login()">Log in</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>

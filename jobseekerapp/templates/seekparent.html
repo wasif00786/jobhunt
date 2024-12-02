@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  {%load static%}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kezan Consulting</title>
+    
+    <link rel="shortcut icon" href="{%static 'img/logo-1.png'%}" type="image/x-icon">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        *
+        {    
+            font-family: 'Montserrat', sans-serif;
+        }
+        .bgimg{
+            background-image: url(22.png);
+            height: 500px;
+            background-size: cover;
+        }
+        .footer ul
+        {
+          list-style-type: disc;
+        }
+        .footer ul li a 
+        {
+          text-decoration: none;
+          color: white;
+        }
+/*** Section Title ***/
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 11px;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #5A5A5A;
+    border-bottom: 1px solid #5A5A5A;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 1px;
+    bottom: 5px;
+    left: 0;
+    background: var(--primary);
+}
+
+.section-title.text-center::before {
+    left: 50%;
+    margin-left: -30px;
+}
+
+.section-title.text-center::after {
+    width: 120px;
+    left: 50%;
+    margin-left: -60px;
+}
+      </style>
+    </head>
+      <body style="font-family: sans-serif;">
+    
+        <div class="container-fluid">
+            <!-- -------------------------headline-------------- -->
+            <div class="row  p-2 text-end border">
+                <div class="col-sm-4 text-start"><i class="fa-solid fa-envelope" style="color: #FF6634;"></i>&nbsp; Email Address:&nbsp;info@kezanconsulting.com</div>
+                <div class="col-sm-4 text-start"><i class="fa-solid fa-location-dot" style="color: #FF6634;"></i>&nbsp; Office Address: 501, Cyber Heights, Lucknow</div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                    <span><a href="" style=" text-decoration: none;"><i class="fa-brands fa-facebook text-dark" style=" font-size: 20px;"></i>&nbsp;</a></span>
+                    <span><a href="" style=" text-decoration: none;"><i class="fa-brands fa-instagram text-dark" style=" font-size: 20px;"></i>&nbsp;</a></span>
+                    <span><a href="" style=" text-decoration: none;"><i class="fa-brands fa-linkedin text-dark" style=" font-size: 20px;"></i>&nbsp;</a></span>
+                </div>
+            </div>
+       </div>
+            <!-- -------------------------headline-------------- -->
+            <!-- ---------------------------navbar--------------------- -->
+            <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg bg-light p-3 border">
+                        <div class="container-fluid">
+                          <a class="navbar-brand" href="#"><img src="logo-1.png"  height="50px" alt=""></a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mx-3 mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link active fw-bold" aria-current="page" href="{%url 'jobseeker:seekerindex'%}">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link active fw-bold" aria-current="page" href="{%url 'jobseeker:alljob'%}">Jobs</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link active fw-bold" aria-current="page" href="{% url 'jobseeker:contact'%}">Contact Us</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link active fw-bold" aria-current="page" href="{% url 'jobseeker:appliedjob' %}">Applied Jobs</a>
+                              </li>
+                        
+                            </ul>
+                            
+                      
+                            <a href="{%url 'mainapp:logout'%}" style="text-decoration: none;">
+                           <div class="div  p-3 my-auto d-flex" style="height: 60px; width:250px; border-radius: 6px; background-color:black;color: white;">
+                            <h6 class="mt-1 fw-bold" style="color: white;">LOGOUT</h6>
+                            <div class="div1" style=" background-color: white;  border-radius:5px; padding: 5px; height: 40px; width:40px; font-size: 20px; margin-top: -5px; margin-left: 100px;">
+                                <a href=""><i class="fa-solid fa-arrow-right my-auto mx-1 text-dark"></i></a>
+                            </div>
+                            <span  class="mx-auto my-auto"></span>
+                           </div>
+                          </a>
+                          </div>
+                        </div>
+                      </nav>
+                </div>
+            </div>
+        </div>
+            <!-- ---------------------------navbar--------------------- -->
+
+
+           {%block body%}
+           {%endblock%}
+
+
+        <!-- footer start -->
+
+        <div class="container-fluid bg-black">
+            <div class="container py-3">
+              <div class="row p-3 text-white footer">
+                <div class="col-sm-3 p-2">
+                  <img src="{%static 'img/logo-1.png'%}" alt="" height="100px">
+                  <br>
+                  <br>
+                  <p>
+                    At Kezan Consulting, we believe in the power of human potential. 
+                    <br>
+                    Our mission is to empower businesses like yours to thrive by harnessing the full capabilities of your most valuable asset—your people.
+                  </p>
+                </div>
+                <div class="col-sm-3 p-2">
+                  <p style="font-weight: bold; font-size: 20px;">
+                    <span style="border-bottom: 2px solid #FF6634; padding-bottom: 10px;">COMP</span>ANY
+                  </p>
+                  <br>
+                  <ul>
+                    <li><a href="#">About Us</a></li>
+                    <br>
+                    <li><a href="#">Contact Us</a></li>
+                    <br>
+                    <li><a href="#">Corporate Social Responsibility</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 p-2">
+                  <p style="font-weight: bold; font-size: 20px;">
+                    <span style="border-bottom: 2px solid #FF6634; padding-bottom: 10px;">SERV</span>ICES
+                  </p>
+                  <br>
+                  <ul>
+                    <li><a href="#">Payroll Management</a></li>
+                    <br>
+                    <li><a href="#">Perm Recruitment</a></li>
+                    <br>
+                    <li><a href="#">Contract Staffing</a></li>
+                    <br>
+                    <li><a href="#">Training Management</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 p-2">
+                  <p style="font-weight: bold; font-size: 20px;">
+                    <span style="border-bottom: 2px solid #FF6634; padding-bottom: 10px;">ADDR</span>ESS:
+                  </p>
+                  <br>
+                  <p>
+                    501 A, 5th Floor, Cyber Heights, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010
+  Talk To Our Support 0522 4339679
+                  </p>
+                  <br>
+                  <p style="font-weight: bold; font-size: 20px;">
+                    <span style="border-bottom: 2px solid #FF6634; padding-bottom: 10px;">FOLLO</span>W US ON
+                  </p>
+                  <i class="fa-brands text-secondary fa-instagram fs-1"></i>
+                  <i class="fa-brands fa-youtube text-danger fs-1"></i>
+                  <i class="fa-brands fa-twitter fs-1 text-info"></i>
+                  <i class="fa-brands fa-facebook fs-1 text-primary"></i>
+                </div>
+              </div>
+              <hr>
+              <div class="row ">
+                <div class="col-sm-12 text-white text-center">
+                  <p>
+                    Copyright © 2024 Designed and developed by <span style="color: #FF6634; font-weight: bold;"> SOFTPRO INDIA </span>, All Rights Reserved.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- footer end -->
+ 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+ 
+
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+  </html>

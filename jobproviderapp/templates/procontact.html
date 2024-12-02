@@ -1,0 +1,94 @@
+{%extends 'proparent.html'%}
+{%load static%}
+{%block body%}
+<div class="container-fluid">
+    <div class="row" style="background-image: url({%static 'img/title-bg.jpg'%}); background-size: cover; background-repeat: no-repeat; height: 500px;">
+        <div class="col-sm-10 mx-auto my-auto text-white">
+            <p style="font-weight: bold; font-size: 32px;">
+                <span style="border-bottom: 2px solid #FF6634;padding-bottom: 5px;">Conta</span>ct Us
+            </p>
+            <a href="{%url 'mainapp:index'%}" style="color: white;text-decoration: none;">Kezan Consulting: Your Trusted Partner for Strategic Human Resource Solutions </a>> Contact Us
+        </div>
+            </div>
+            </div>
+<!-- slider end -->
+<!-- body start -->
+<div class="container py-5">
+    <div class="row py-3">
+        <div class="col-sm-3 mx-auto p-5" style="border-radius: 5px;box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);">
+            <i class="fa-solid fa-map-location fa-2xl" style="color: #FF6634;font-size: 50px;"></i>
+            <br>
+            <br>
+            <h5>Head Office</h5>
+            <p>
+                501 A, 5th Floor, Cyber Heights, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh 226010
+            </p>
+        </div>
+        <div class="col-sm-4 mx-auto p-5" style="border-radius: 5px;box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);">
+            <i class="fa-solid fa-map-location fa-2xl" style="color: #FF6634;font-size: 50px;"></i>
+            <br>
+            <br>
+            <h5>Regional Office</h5>
+            <p>
+                601 B Wing , Annapurna, Near Raigad Military School, Above Delicacy of China, Andheri W, Oshiwara, Mumbai, Maharashtra
+            </p>
+        </div>
+        <div class="col-sm-3 mx-auto p-5" style="border-radius: 5px;box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);">
+            <i class="fa-solid fa-map-location fa-2xl" style="color: #FF6634;font-size: 50px;"></i>
+            <br>
+            <br>
+            <h5>Regional Office</h5>
+            <p>
+                B-14/15, Sector-1, 3rd Floor, Near Sector 15 Metro Station, Noida.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container py-5 mb-5" style="box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);border-radius: 10px;">
+    <div class="row p-3">
+        <div class="col-sm-6 p-5">
+            <h1 style="font-weight: bold;">
+                Have be any Question? feel free to contact with us.
+            </h1>
+            <br>
+            <p style="color: #8f9091;">
+                Ready to explore the possibilities with Kezan Consulting? Contact us today and discover how our expertise can contribute to the success of your organization.
+            </p>
+            <br>
+            <p>
+                <i class="fa-brands fa-square-facebook fa-2xl" style="color: #FF6634;"></i>
+                &nbsp;
+                <i class="fa-brands fa-linkedin fa-2xl" style="color: #FF6634;"></i>&nbsp;
+                <i class="fa-brands fa-square-instagram fa-2xl" style="color: #FF6634;"></i>
+            </p>
+        </div>
+        <div class="col-sm-6 p-3">
+            {% if msg %}
+            <p class="alert alert-success">
+                {{msg}}
+            </p>
+            {%endif%}
+            <form action="{%url 'jobprovider:procontact'%}" method="post">
+                {%csrf_token%}
+              <input type="text" placeholder="Your Name" name="name" class="form-control" style="height: 50px;">
+              <br>
+              Select Your Gender : 
+              <input type="radio" name="gender" class="form-check-input" value="male" id=""> Male 
+              <input type="radio" name="gender" class="form-check-input" value="male" id=""> Female 
+              <br>
+              <br>
+              <input type="text" placeholder="Email" name="email" class="form-control" style="height: 50px;">
+              <br>
+              <input type="text" placeholder="Mobile Number" name="mobile" class="form-control" style="height: 50px;">
+              <br>
+              <input type="text" placeholder="Subject" name="subject" class="form-control" style="height: 50px;">
+              <br>
+              <textarea name="message" id="" cols="30" rows="3" placeholder="Write a Message" class="form-control"></textarea>
+              <br>
+              <input type="submit" value="SEND MESSAGE" class="btn" style="height: 50px; width: 170px;background-color: black;color: white;">
+            </form>
+          </div>
+    </div>
+</div>
+<!-- body end -->  
+{%endblock%}

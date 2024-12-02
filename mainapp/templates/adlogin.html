@@ -1,0 +1,29 @@
+{%extends 'parent.html'%}
+{%load static%}
+{% block body %}
+<div class="row" style="background:linear-gradient(90deg,rgba(255, 0, 0, 0.7)50%,rgba(200, 200, 200, 0.7)50%),url('{%static 'img/best.jpg'%}');background-size:cover;">
+  <div class="col-sm-10 mx-auto px-5" >
+   
+<form action="{%url 'mainapp:logcode'%}" method="post"  class="form-group w-50 border mx-auto p-5 my-5" style="border-radius:30%;background:linear-gradient(270deg,rgba(255, 0, 0, 0.7)50%,rgba(255, 255, 255, 0.7)50%),url('../static/img/s2.jpg');background-size:cover; box-shadow: 0 20px 25px black;">
+    {% csrf_token %}
+
+    <h2 class="text-center text-light"><span class="text-danger">Admin Lo</span>gin Form</h2>
+    {%if messages%}
+    {%for m  in messages%}
+    <h2>{{m}}</h2>
+    {%endfor%}
+    {%endif%}
+    <input  type="text" placeholder="Enter Your Id " class="form-control  text-danger fw-bold border-secondary bg-transparent" style="box-shadow: 0 10px 25px black;"name="username">
+    <input  type="hidden" placeholder="Enter Your Id " class="form-control text-danger fw-bold border-secondary bg-transparent" value="ad" style="box-shadow: 0 10px 25px black;"name="usertype">
+    <br>
+    <input type="password"  placeholder="Enter Your Password " class="text-danger fw-bold form-control border-primary bg-transparent" style="box-shadow: 0 10px 25px black;" name="password">
+    <br>
+    <h6><a href="" style="color:red; ">Forgot Password</a></h6> 
+    <button type="submit" class="btn btn-outline-danger form-control" style="color: white;"><span class="btn btn-light">Login</span></button>
+
+    <br>
+    <br>
+  </form>
+</div>
+</div>
+{% endblock %}

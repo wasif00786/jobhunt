@@ -1,0 +1,54 @@
+{%extends 'adparent.html'%}
+{%load static%}
+{%block body%}
+
+<div class="container pt-5">
+    <div class="row pt-5">
+        <div class="col-md-3 col-sm-6">
+            <div class="counter">
+                <div class="counter-content">
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3>Employeers</h3>
+                </div>
+                <span class="counter-value">{{emp}}</span>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="counter green">
+                <div class="counter-content">
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3>Seekers</h3>
+                </div>
+                <span class="counter-value">{{seeker}}</span>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="counter">
+                <div class="counter-content">
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3>Jobs</h3>
+                </div>
+                <span class="counter-value">{{job}}</span>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="counter green">
+                <div class="counter-content">
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h3>Applied</h3>
+                </div>
+                <span class="counter-value">{{aj}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

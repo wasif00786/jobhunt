@@ -1,0 +1,101 @@
+{%extends 'proparent.html'%}
+{%load static%}
+{%block body %}
+<style>
+    .col-md-6:nth-child(odd)
+    {
+        color:white;
+    }
+    .col-md-6:nth-child(even)
+    {
+        color:red;
+    }
+    .col-md-6:nth-child(even) input,.col-md-6:nth-child(even) textarea
+    {
+        background-color:rgba(255, 0, 0, 0.316);
+        color:white;
+    }
+    .col-md-6:nth-child(even) input::placeholder,.col-md-6:nth-child(even) textarea::placeholder{
+        color: white;
+    }
+    
+    .btn:hover .btn-danger-text
+    {
+        color:red;
+    }
+</style>
+<div class="container-fluid py-2" style="background:linear-gradient(270deg ,rgba(255,0,0,0.7) 50%,rgba(0, 255, 255, 0.742) 50%),url('{%static 'img/back4.jpeg'%}');">
+    <!-- form Outer -->
+    <div class="container rounded-5  border border-5 border-danger shadow-lg p-4" style="margin: 100px auto; background:linear-gradient(90deg ,rgba(255,0,0,0.7) 50%,rgba(0, 255, 255, 0.742) 50%),url('{%static 'img/back4.jpeg'%}');">
+<div class="row">
+    <div class="col-md-6 mt-4 mb-4">
+        <form action="{%url 'jobprovider:addjobcode'%}" method="POST">
+            {%csrf_token%}
+        <label for="">Firm Name *</label>
+        <input type="text" class="form-control mt-2" placeholder="Enter Your Firm Name" name="firmname" style="height:50px; border-radius: 0px;">
+    </div>
+    <div class="col-md-6 mt-4 mb-4">
+        <label for="">Job Title *</label>
+        <input type="text" name="jobtitle" class="form-control mt-2" placeholder="Enter your Job Title" style="height:50px; border-radius: 0px;">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <label for="">Select Post</label>
+            <select style="height: 50px; width:100%" class="dropdown mt-2 border-0" name="post">
+<option value="">Select Jobs</option>
+<option value="Senior Developer">Senior Developer </option>
+<option value="Junior Developer">Junior Developer</option>
+<option value="Intern">Intern</option>
+            </Select>
+       
+    </div>
+    <div class="col-md-6 mb-4">
+        <label for="">Description *</label>
+        <textarea name="jobdesc" class="form-control mt-2" placeholder="Enter Your Description" style="height:50px; border-radius: 0px;" id=""></textarea>
+      
+    </div>
+</div>
+<div class="row">
+   
+    <div class="col-md-6 mb-4">
+        <label for="">Qualification*</label>
+        <input type="text" name="qualification" class="form-control mt-2" placeholder="Enter Your Qualification" style="height:50px; border-radius: 0px;">
+    </div>
+    <div class="col-md-6 mb-4">
+        <label for="">Experience *</label>
+        <input type="text" name="experience" class="form-control mt-2" placeholder="Enter Your Experience" style="height:50px; border-radius: 0px;">
+    </div>
+</div>
+<div class="row">
+   
+    <div class="col-md-12 text-light mb-4">
+        <label for="">Location*</label>
+        <textarea name="location" class="form-control mt-2" placeholder="Enter Your Location" style="height:70px; border-radius: 0px;"></textarea>
+        
+    </div>
+    
+</div>
+   
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <label for="">Salary Package *</label>
+            <input name="salary" type="text" class="form-control mt-2" placeholder="Enter Your Salary Package" style="height:50px; border-radius: 0px;">
+        </div>
+        <div class="col-md-6 mb-4">
+            <label for="">Email *</label>
+            <input name="emailaddress" type="text" class="form-control mt-2" placeholder="Enter Your Email" style="height:50px; border-radius: 0px;">
+        </div>
+    </div>
+    <!-- form Outer -->
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-outline-light btn-danger-text fw-bold  d-block mx-auto w-50" >
+                Add <span class="btn-danger-text text-danger ">Job</span>
+            </button>
+        </form>
+        </div>
+    </div>
+</div>
+    </div>
+{%endblock%}

@@ -1,0 +1,47 @@
+{%extends 'adparent.html'%}
+{%load static%}
+{%block body%}
+
+
+<!-- Seeker start -->
+<div class="container-fluid py-5">
+    <div class="container px-lg-5">
+        <div class="section-title position-relative text-center mx-auto mb-5 pb-4" style="max-width: 700px;">
+            <h2 class="mb-3" style="font-weight: bold;"> <span style="border-bottom: 2px solid #FF6634; padding-bottom: 10px;">NE</span>W <span style="color: #FF6634;">SEEKERS</span></h2>
+            <br>
+            <h5 class="mb-1">Search for the jobs that fits best for your roles...</h5>
+            {% if msg %}
+            <p class="alert alert-secondary" role="alert">
+                {{msg}}
+            </p>
+            {%endif%}
+        </div>
+        <div class="row gy-5 gx-4">
+            {%for i in seeker %}
+              <div class="col-lg-4 mx-auto col-md-4 col-sm-6 col-10">
+                  <div class="position-relative shadow rounded h-100" style="border-top: 5px solid #FF6634;">
+                      <div class="d-flex align-items-center justify-content-center position-absolute top-0 start-50 translate-middle rounded-circle" style="width: 45px; height: 45px; margin-top: -3px;background-color: #FF6634;">
+                          <i class="fa-solid fa-chart-line text-white"></i>
+                      </div>
+                      <div class="text-center border-bottom p-4 pt-5">
+                          <h4 class="fw-bold">{{i.name}}</h4>
+                          <p class="mb-2">{{i.gender}} </p>
+                          <p class="mb-2">{{i.mobile}}</p>
+                          <p class="mb-2">{{i.email}}</p>
+                          <p class="mb-2">{{i.qualification}} </p>
+                          <P> {{i.experience}} YEAR EXPERIENCE</p>
+                          <p class="mb-2">{{i.address}}</p>
+                          <!-- <p class="mb-2 w-75 bg-dark flex-wrap" style="text-wrap: wrap!important;">{{i.keyskills}}</p> -->
+                      </div>
+                      <div class="text-center p-4">
+                          <a class="btn btn px-4 py-2" href="mailto:“{{i.email}}" style="background-color: #FF6634; color: white; font-weight: bold;">Contact</a>
+                      </div>
+                  </div>
+              </div>
+            {%endfor%}
+          </div>
+        
+    </div>
+</div>
+    <!-- Seeker end -->
+{%endblock%}

@@ -1,0 +1,78 @@
+{%extends 'seekparent.html'%}
+{%load static%}
+{%block body%}
+ <!-- slider start -->
+            <div class="container-fluid">
+            <div class="row" style="background-image: url('{%static 'img/back4.jpeg'%}'); background-size: cover; background-repeat: no-repeat; height:100%;">
+                <div class="col-sm-4 p-3 my-auto text-white mx-auto">
+                    <div style="background-color: #FF6634;width: 250px; height: 200px; border: 1px solid #FF6634; border-radius: 10px 0px 0px 0px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);">
+                    <p style="font-weight: bold;margin-top: 50px; margin-left: 30px; font-size: 18px;">
+                        <i class="fa-solid fa-trophy fa-2xl" style="font-size: 50px;"></i>
+                        <br>
+                        <br>
+                        We're ready to assist you !
+                    </p>
+                    </div>
+                </div>
+                <div class="col-sm-7 p-5 my-auto text-white" style="text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);">
+                    <h1 style="font-weight: bold;font-size: 40px;">
+                        Welcome to Kezan <br> Consulting:
+                        </h1>
+                    <h1>
+                <span style="color: #FF6634;font-weight: bold;">
+                    Empowering Your Success
+                </span></h1>
+                <br>
+                <p>
+                    Kezan Consulting, a unit of Kezan India Pvt. Ltd., is a distinguished firm specializing in comprehensive Human Resource services. With offices in Lucknow and Noida, we extend our expertise and tailored solutions across the country.
+                </p>
+                <br>
+                <p>
+                    <span style="font-weight: bold;">
+                        <i class="fa-regular fa-circle-check fa-xl" style="color: #FF6634;"></i> Our Commitment
+                    </span>
+                    <br>
+                    At the core of our philosophy lies a commitment to excellence. We understand that every business is unique, and we tailor our services to align seamlessly with your organizational goals, creating an environment where success flourishes.
+                </p>
+                </div>
+            </div>
+        </div>
+
+            <!-- Slider end -->
+
+            <!-- jobs start -->
+        <div class="container-fluid py-5">
+            <div class="container px-lg-5">
+                <div class="section-title position-relative text-center mx-auto mb-5 pb-4" style="max-width: 700px;">
+                    <h2 class="mb-3" style="font-weight: bold;"> <span style="border-bottom: 2px solid #FF6634; padding-bottom: 10px;">LAT</span>EST <span style="color: #FF6634;">JOBS</span></h2>
+                    <br>
+                    <h5 class="mb-1">Search for the jobs that fits best for your roles...</h5>
+                </div>
+                <div class="row gy-5 gx-4">
+                  {%for i in job %}
+                    <div class="col-lg-4 mx-auto col-md-4 col-sm-6 col-10">
+                        <div class="position-relative shadow rounded h-100" style="border-top: 5px solid #FF6634;">
+                            <div class="d-flex align-items-center justify-content-center position-absolute top-0 start-50 translate-middle rounded-circle" style="width: 45px; height: 45px; margin-top: -3px;background-color: #FF6634;">
+                                <i class="fa-solid fa-chart-line text-white"></i>
+                            </div>
+                            <div class="text-center border-bottom p-4 pt-5">
+                                <h4 class="fw-bold">{{i.jobtitle}}</h4>
+                                <p class="mb-2">{{i.post}} </p>
+                                <p class="mb-2">{{i.jobdesc}}</p>
+                                <p class="mb-2">{{i.qualification}} </p>
+                                <P> {{i.experience}} YEAR EXPERIENCE</p>
+                                <p class="mb-2">{{i.location}}</p>
+                                <p class="mb-2">Upto :-{{i.salary}}/-</p>
+                            </div>
+                            <div class="text-center p-4">
+                                <a class="btn btn px-4 py-2" href="{%url 'jobseeker:applyjob' i.id %}" style="background-color: #FF6634; color: white; font-weight: bold;">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                  {%endfor%}
+                </div>
+                
+            </div>
+        </div>
+            <!-- jobs end -->
+{%endblock%}
