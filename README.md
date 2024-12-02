@@ -22,13 +22,13 @@ Job Hunt is an online job portal for Kezan Consultancy. The portal acts as an in
 
 ## Screenshots
 
-C:\Users\wasif\Desktop\jobhunt123\jobhunt\pics\IMG-20241202-WA0010.jpg
-C:\Users\wasif\Desktop\jobhunt123\jobhunt\pics\IMG-20241202-WA0009.jpg
-C:\Users\wasif\Desktop\jobhunt123\jobhunt\pics\IMG-20241202-WA0008.jpg
-C:\Users\wasif\Desktop\jobhunt123\jobhunt\pics\IMG-20241202-WA0007.jpg
-C:\Users\wasif\Desktop\jobhunt123\jobhunt\pics\IMG-20241202-WA0006.jpg
-C:\Users\wasif\Desktop\jobhunt123\jobhunt\pics\IMG-20241202-WA0005.jpg
-C:\Users\wasif\Desktop\jobhunt123\jobhunt\pics\IMG-20241202-WA0004.jpg
+https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0004.jpg
+https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0005.jpg
+https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0006.jpg
+https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0007.jpg
+https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0008.jpg
+https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0009.jpg
+https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0010.jpg
 
 ## Tech Stack
 
