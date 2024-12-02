@@ -21,14 +21,20 @@ Job Hunt is an online job portal for Kezan Consultancy. The portal acts as an in
 - **Responsive Feedback:** Admin can respond to user feedback and queries.
 
 ## Screenshots
-![App Screenshot]
-(https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0004.jpg
-https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0005.jpg
-https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0006.jpg
-https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0007.jpg
-https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0008.jpg
-https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0009.jpg
-https://github.com/wasif00786/jobhunt/blob/main/pics/IMG-20241202-WA0010.jpg)
+![IMG-20241202-WA0010](https://github.com/user-attachments/assets/253facda-f229-45be-917b-099034eddf4a)
+
+![IMG-20241202-WA0009](https://github.com/user-attachments/assets/8df128f2-42eb-4ff7-a10f-3b00792cdd41)
+
+![IMG-20241202-WA0008](https://github.com/user-attachments/assets/4d54d46c-ccd2-4f96-a693-1875bba2664c)
+
+![IMG-20241202-WA0007](https://github.com/user-attachments/assets/295524de-a97e-42d7-9884-496c4f825c36)
+
+![IMG-20241202-WA0006](https://github.com/user-attachments/assets/d0f92db7-e8f2-49de-9455-49620e00553c)
+
+![IMG-20241202-WA0005](https://github.com/user-attachments/assets/d6d19c6e-b246-4bc1-9c12-cefe328b3a0f)
+
+
+![IMG-20241202-WA0004](https://github.com/user-attachments/assets/4af4dbe9-6540-47df-a95b-aeef692635ef)
 
 ## Tech Stack
 
